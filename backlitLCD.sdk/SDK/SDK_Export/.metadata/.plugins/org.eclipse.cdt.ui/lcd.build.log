@@ -1,0 +1,28 @@
+11:55:13 **** Auto Build of configuration Debug for project lcd ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lcd_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.3 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:193:19: warning: unused variable 'axi_timer_0_Timer' [-Wunused-variable]
+    static XTmrCtr axi_timer_0_Timer;
+                   ^
+../src/testperiph.c:192:17: warning: unused variable 'intc' [-Wunused-variable]
+    static XIntc intc;
+                 ^
+Finished building: ../src/testperiph.c
+ 
+Building target: lcd.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.3 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lcd.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lcd.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size lcd.elf  |tee "lcd.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11376	    340	   2092	  13808	   35f0	lcd.elf
+Finished building: lcd.elf.size
+ 
+
+11:55:15 Build Finished (took 1s.928ms)
+
