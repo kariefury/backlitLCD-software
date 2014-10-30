@@ -1,3 +1,11 @@
+# Vivado Folders
+*/backlitLCD.cache/*
+*/backlitLCD.runs/impl_1/*
+*/backlitLCD.runs/synth_1/*
+*/backlitLCD.runs/.jobs/
+*/backlitLCD.sdk/SDK/SDK_Export/RemoteSystemsTempFiles
+*/backlitLCD.srcs/sourceS_1/bd/system/.Xil/
+
 # Object files
 *.o
 *.ko
